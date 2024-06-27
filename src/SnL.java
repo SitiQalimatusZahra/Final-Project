@@ -166,7 +166,6 @@ public class SnL {
         this.gameStatus=1;
         p.moveAround(x, this.boardSize);
 
-        //zahra: ide mu apa
         //Check if the player rolled a 3 and chooses to use Golden Ladder
         if (x == 3) {
             System.out.println(p.getName() + " you rolled a 3! Do you want to use Golden Ladder? (yes/no)");
