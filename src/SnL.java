@@ -112,6 +112,22 @@ public class SnL {
     public int getGameStatus(){
         return this.gameStatus;
     }
+    public void board_display(Player p1, Player p2){
+        for (int i = 0; i < 10; i++){
+            for (int e = 0; e< 10; e++){
+                if (p1.getPosition() == i*10 + e){
+                    System.out.print("p1 ");
+                }
+                else if (p2.getPosition() == i*10 +e){
+                    System.out.print("p2 ");
+                }
+                else{
+                    System.out.print(".  ");
+                }
+            }
+            System.out.println();
+            }
+        }
     public void play(){
         initiateGame();
 
@@ -137,6 +153,7 @@ public class SnL {
         do{
             System.out.println("----------------------------------------------");
             nowPlaying = getTurn();
+            board_display(this.players.get(0), this.players.get(1));
             System.out.println("Now Playing: "+ nowPlaying.getName()+" the current position is "+nowPlaying.getPosition());
 
             //
